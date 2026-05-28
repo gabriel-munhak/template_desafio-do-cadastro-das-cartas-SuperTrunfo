@@ -144,14 +144,16 @@ int main() {
 
   printf("\n-- Duelo --\n\n");
 
-  printf("Comparação de Cartas:");
-  printf("População: Carta A venceu (%d)\n", (populacaoCartaA > populacaoCartaB));
-  printf("Área: Carta A venceu (%d)\n", (areaEmKmQuadradoCartaA > areaEmKmQuadradoCartaB));
-  printf("PIB: Carta A venceu (%d)\n", (pibCartaA > pibCartaB));
-  printf("Pontos Turísticos: Carta A venceu (%d)\n", (quantidadeDePontosTuristicosCartaA > quantidadeDePontosTuristicosCartaB));
-  printf("Densidade Populacional: Carta A venceu (%d)\n", (densidadePopulacionalCartaA > densidadePopulacionalCartaB));
-  printf("PIB per Capita: Carta A venceu (%d)\n", (pibPerCapitaCartaA > pibPerCapitaCartaB));
-  printf("Super Poder: Carta A venceu (%d)\n", (superPoderCartaA > superPoderCartaB));
+  printf("O estado %s tem %f de poder\n", nomeDaCidadeCartaA, superPoderCartaA);
+  printf("O estado %s tem %f de poder\n", nomeDaCidadeCartaB, superPoderCartaB);
+
+  if (superPoderCartaA > superPoderCartaB) {
+    printf("O estado %s venceu!\n", nomeDaCidadeCartaA);
+  } else if (superPoderCartaA < superPoderCartaB)  {
+    printf("O estado %s venceu!\n\n", nomeDaCidadeCartaB);
+  } else {
+    printf("Empate!");
+  };
 
   printf("\n-- Obrigado por criar cartas conosco --\n\n");
 
